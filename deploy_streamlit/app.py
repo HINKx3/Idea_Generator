@@ -5,7 +5,7 @@ import textwrap
 import json
 
 # Set up Cohere client
-co = cohere.Client(api_key=st.secrets[api_key]) 
+co = cohere.Client(os.environ["co_api_key"]) 
 
 def generate_idea(industry, temperature):
   """
